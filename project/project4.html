@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내가 좋아하는게임</title>
+    <script>
+        var imgindex=0;
+        function image_onclick(){
+        var arrimage = new Array("lol.PNG","lol1.jpg","lol2.jpg","lol3.jpg");
+        var imgSource=document.getElementById("img1");
+        imgindex++;
+        imgSource.src=arrimage[imgindex%arrimage.length];
+        
+            }
+    </script>
+</head>
+<body>
+   <h1>내가 좋아하는 게임~</h1>
+   <p>이것은 제가 좋아하는 게임들입니다!</p>
+   <br>
+   <p>처음으로 소개해드릴것은 리그오브레전드(롤) 이라는 게임입니다.</p>
+   <img id="img1" src="lol.PNG" src="lol.PNG" onclick="image_onclick()" width="500" height="400">
+   <p>이 게임은 5:5 게임으로 팀원들과 합을 맞추며 상대방의 넥서스 라는것을 파괴하는 게임입니다.</p><br>
+   <p>약 140개의 챔피언을 서로 조합하여 5명이서 조합을 맞추어 하는 게임입니다.</p><br>
+   
+   <p>이번에 소개드릴 게임은 던전앤파이터 라는 게임입니다.</p>
+   <img src="dnf.PNG" alt="던파" width="500" height="400">
+   <p>이 게임은 던전앤파이터 라는 게임으로 자기만의 캐릭터를키워 레이드를 하거나 결투장을 즐기는 게임입니다.</p><br>
+   
+   <p>마지막으로 소개해 드릴 게임은 하스스톤 이라는 게임입니다.</p><br>
+    <img src="hs.PNG" alt="하스스톤" width="500" height="400">
+    <p>이 게임은 9개의 직업이있는데 각 직업마다 특성이 다르고 게임하는 방식이 다릅니다.</p>
+    <p>각각의 직업으로 30장의 카드를 조합하여 덱(deck)이라는 것을 만들고 플레이하여</p>
+    <p>제일 낮은 25급 부터 시작하여 1급 위에있는 전설 이라는 등급까지 있습니다.</p>
+    
+</body>
+</html>

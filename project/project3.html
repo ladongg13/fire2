@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>일본 여행~</title>
+    <style>
+        img {
+            width: 500px;
+            height: 250px;
+        }
+
+        #imgbox ul {
+            width: 2520px;
+            top: 340px;
+            height: 300px;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            left: 0px;
+            transition: left .3s;
+        }
+
+        .btn {
+            width: 50px;
+            height: 50px;
+        }
+
+        #box ul {
+
+            padding: 0;
+            margin: 0;
+            top: 50px;
+            width: 2520px;
+            height: 250px;
+            position: absolute;
+            left: 0px;
+
+            transition: left .3s;
+        }
+
+        #box ul li {
+
+
+            list-style: none;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        #imgbox ul li {
+
+
+            list-style: none;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        #view {
+            width: 1000px;
+            height: 650px;
+            border: 2px solid green;
+            position: fixed;
+            overflow: hidden;
+
+        }
+        #bodyview{
+            width: 2560px;
+            height:875px;
+             border: 2px solid green;
+            background-repeat: no-repeat;
+            background-size:100%;
+            background-image: url(asd1.jpg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <script>
+        window.onload = function() {
+            var prevBtn =
+                document.querySelector('#next2');
+            var nextBtn =
+                document.querySelector('#next');
+            var ul =
+                document.querySelector('#box ul');
+            var ultwo =
+                document.querySelector('#imgbox ul');
+
+
+            var x = 0;
+            var step = 500;
+            var cnt = 0;
+            var nextMove = function() {
+                cnt = cnt + 1;
+
+                x -= step;
+                ul.style.left = x + 'px';
+                ultwo.style.left = x + 'px';
+            }
+            var prevMove = function() {
+                cnt = cnt + 1;
+                x += step;
+                ul.style.left = x + 'px';
+                ultwo.style.left = x + 'px';
+            }
+            nextBtn.onclick = nextMove;
+            prevBtn.onclick = prevMove;
+
+        }
+
+    </script>
+    <button id="next" class="btn">prev</button>
+    <button id="next2" class="btn">next</button>
+    <div id="bodyview">
+        <div id=view>
+            <div id="box">
+                <ul>
+                    <li><img src="dduk.jpg"></li>
+                    <li><img src="fish1.jpg"></li>
+                    <li><img src="fish2.jpg"></li>
+                    <li><img src="fish3.jpg"></li>
+                    <li><img src="japan1.PNG"></li>
+                </ul>
+            </div>
+
+            <div id="imgbox">
+                <ul>
+                    <li><img src="덮밥.jpg"></li>
+                    <li><img src="사슴.jpg"></li>
+                    <li><img src="부엉이카페.jpg"></li>
+                    <li><img src="%EB%9D%BC%EB%A9%98.jpg"></li>
+                    <li><img src="초밥집.jpg"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+
+
+</body>
+
+</html>
